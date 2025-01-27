@@ -1,0 +1,31 @@
+Source: python-deprecated
+Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Uploaders: Bas Couwenberg <sebastic@debian.org>
+Section: python
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               dh-sequence-python3,
+               pybuild-plugin-pyproject,
+               python3-all,
+               python3-pytest,
+               python3-pytest-cov,
+               python3-setuptools,
+               python3-sphinx,
+               python3-wrapt
+Standards-Version: 4.7.0
+Vcs-Browser: https://salsa.debian.org/debian-gis-team/python-deprecated
+Vcs-Git: https://salsa.debian.org/debian-gis-team/python-deprecated.git
+Homepage: https://github.com/tantale/deprecated
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-pybuild
+
+Package: python3-deprecated
+Architecture: all
+Depends: ${python3:Depends},
+         ${misc:Depends}
+Description: Python decorator for old classes, functions or methods
+ The deprecated module provides the @deprecated decorator to deprecate old
+ Python classes, functions or methods.
+ .
+ This package contains the module for Python 3.

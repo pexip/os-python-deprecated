@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export PYBUILD_NAME=deprecated
+export PYBUILD_TEST_ARGS=-vv
+
+%:
+	dh $@ --buildsystem=pybuild
